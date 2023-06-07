@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Question</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="container-head">
+            Quiz App
+        </div>
+        <div class="container-form">
+            <div class="question">
+                <textarea name="question" placeholder="Enter Your Question Here"></textarea>
+            </div>
+            <div class="options">
+                <ul>
+                    <li><input type="radio" name="option"><textarea name="option1" placeholder="Option 1"></textarea></li>
+                    <li><input type="radio" name="option"><textarea name="option2" placeholder="Option 2"></textarea></li>
+                    <li><input type="radio" name="option"><textarea name="option3" placeholder="Option 3"></textarea></li>
+                    <li><input type="radio" name="option"><textarea name="option4" placeholder="Option 4"></textarea></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var csrf = '{% csrf_token %}'
+    </script>
+    <script src="{% static 'submitCreateResponse.js' %}"></script>
+</body>
+</html>

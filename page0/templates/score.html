@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="container-head">
+            Quiz App
+            <br>
+            Score
+        </div>
+        {% if messages %}
+                <div class="container-message">
+                    {% for message in messages %}
+                        <div class="{{message.tags}}">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        <div class="container-info">
+            <p>Username: {{username}}</p>
+            <p>Questions Attempted: {{c}}</p>
+            <p>Score: {{s}}</p>
+            <a href="/">Play Again</a>
+        </div>
+    </div>
+</body>
+</html>

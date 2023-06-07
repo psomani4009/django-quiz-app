@@ -1,0 +1,106 @@
+body {
+    background-color: #94ffd6;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container .container-head {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container .container-message {
+    width: 100%;
+    margin-top: 15px;
+    background-color: aqua;
+}
+
+.container .container-message .success {
+    background-color: green;
+    font-size: 36px;
+}
+
+.container .container-message .error {
+    background-color: red;
+    font-size: 36px;
+}
+
+.container .container-form {
+    margin-top: 25px;
+}
+
+.container .container-info {
+    font-size: 32px;
+}
+
+.container .container-info a {
+    font-size: 28px;
+    text-decoration: none;
+    background-color: #16ffa6;
+    color: black;
+    padding: 5px 25px;
+    transition: 0.4s;
+}
+
+.container .container-info a:hover {
+    background-color: #18a56f;
+}
+
+.container .container-form .question {
+    font-size: 28px;
+}
+
+.container .container-form .question textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    font-size: 28px;
+}
+
+.container .container-form .options ul {
+    list-style-type: none;
+    width: max-content;
+}
+
+.container .container-form .options ul li {
+    font-size: 24px;
+    margin: 15px;
+    width: 100%;
+    display: inline-flex;
+}
+
+.container .container-form .options ul li label {
+    display: block;
+    width: 100%;
+}
+
+.container .container-form .options ul li textarea {
+    display: inline;
+    width: 60%;
+    resize: none;
+}
+
+.container .container-form .btn {
+    margin: 25px 12px;
+}
+
+.container .container-form .btn button {
+    width: 120px;
+    margin: 0px 20px;
+    font-size: 24px;
+    background-color: #16ffa6;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container .container-form .btn button:hover {
+    background-color: #18a56f;
+}

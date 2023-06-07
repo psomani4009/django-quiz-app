@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="container-head">
+            Quiz App
+            <br>
+            username: {{name}}
+            <br>
+            Question: {{c}} Score: {{s}}
+        </div>
+        <div class="container-form">
+            {% if messages %}
+                <div class="container-message">
+                    {% for message in messages %}
+                        <div class="{{message.tags}}">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="question">
+                {{q}}
+            </div>
+            <div class="options">
+                <ul>
+                    <li><label><input type="radio" name="option" value="{{a.0}}">{{a.0}}</label></li>
+                    <li><label><input type="radio" name="option" value="{{a.1}}">{{a.1}}</label></li>
+                    <li><label><input type="radio" name="option" value="{{a.2}}">{{a.2}}</label></li>
+                    <li><label><input type="radio" name="option" value="{{a.3}}">{{a.3}}</label></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="submit">Finish</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var csrf = '{% csrf_token %}'
+    </script>
+    <script src="{% static 'submitResponse.js' %}"></script>
+</body>
+</html>
